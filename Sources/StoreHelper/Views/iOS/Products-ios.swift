@@ -64,7 +64,7 @@ public struct Products: View {
     
     @ViewBuilder public var body: some View {
         ScrollView {
-            VStack {
+            HStack {
                 ProductListView(showRefundSheet: $showRefundSheet, refundRequestTransactionId: $refundRequestTransactionId, signPromotionalOffer: signPromotionalOffer, productInfoCompletion: productInfoCompletion)
                 /*TermsOfServiceAndPrivacyPolicyView().padding(.top)
                 
