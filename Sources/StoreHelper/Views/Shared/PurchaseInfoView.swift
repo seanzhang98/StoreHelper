@@ -48,7 +48,7 @@ public struct PurchaseInfoView: View {
                     .frame(height: 30)*/
                 
                 SubHeadlineFont(scaleFactor: storeHelper.fontScaleFactor) { Text(purchaseInfoText.count > 0 ? purchaseInfoText : "Purchased")}
-                    .foregroundColor(.accentcolor)
+                    .foregroundColor(.accentColor)
                     .lineLimit(nil)
             }
         }
