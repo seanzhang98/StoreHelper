@@ -42,13 +42,13 @@ public struct PurchaseInfoView: View {
         
         Button(action: { withAnimation { showPurchaseInfoSheet.toggle()}}) {
             HStack {
-                Image(systemName: "creditcard.circle")
+                /*Image(systemName: "creditcard.circle")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 30)
+                    .frame(height: 30)*/
                 
                 SubHeadlineFont(scaleFactor: storeHelper.fontScaleFactor) { Text(purchaseInfoText.count > 0 ? purchaseInfoText : "Purchased")}
-                    .foregroundColor(.blue)
+                    .foregroundColor(.accentcolor)
                     .lineLimit(nil)
             }
         }
