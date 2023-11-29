@@ -83,12 +83,12 @@ public struct ProductView: View {
             
             if purchaseState == .purchased {
                 #if os(iOS)
-                PurchaseInfoView(showRefundSheet: $showRefundSheet, refundRequestTransactionId: $refundRequestTransactionId, productId: productId)
+                //PurchaseInfoView(showRefundSheet: $showRefundSheet, refundRequestTransactionId: $refundRequestTransactionId, productId: productId)
                 #else
-                PurchaseInfoView(productId: productId)
+                //PurchaseInfoView(productId: productId)
                 #endif
             } else {
-                //ProductInfoView(productId: productId, displayName: displayName, productInfoCompletion: productInfoCompletion)
+                ProductInfoView(productId: productId, displayName: displayName, productInfoCompletion: productInfoCompletion)
             }
             
             //Divider()
