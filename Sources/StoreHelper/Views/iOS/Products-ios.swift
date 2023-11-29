@@ -99,7 +99,7 @@ public struct Products: View {
             .alert("Unable to redeem offer code", isPresented: $showRedeemOfferCodeError) { Button("OK") { showRedeemOfferCodeError.toggle() }}
             .task { canMakePayments = AppStore.canMakePayments }
             
-            VersionInfo()
+            //VersionInfo()
         }
         .refreshable { storeHelper.refreshProductsFromAppStore(rebuildCaches: true) }
     }
