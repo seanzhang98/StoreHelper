@@ -64,9 +64,9 @@ public struct SubscriptionView: View {
             PurchaseButton(purchaseState: $purchaseState, productId: productId, price: price, signPromotionalOffer: signPromotionalOffer)
             
             if purchaseState == .purchased, subscriptionInfo != nil {
-                //SubscriptionInfoView(subscriptionInfo: subscriptionInfo!)
+                SubscriptionInfoView(subscriptionInfo: subscriptionInfo!)
             } else {
-                //ProductInfoView(productId: productId, displayName: displayName, productInfoCompletion: productInfoCompletion)
+                ProductInfoView(productId: productId, displayName: displayName, productInfoCompletion: productInfoCompletion)
             }
             
             //Divider()
