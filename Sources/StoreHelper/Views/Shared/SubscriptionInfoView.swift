@@ -28,13 +28,13 @@ public struct SubscriptionInfoView: View {
         
         Button(action: { withAnimation { showSubscriptionInfoSheet.toggle()}}) {
             HStack {
-                Image(systemName: "creditcard.circle")
+                /*Image(systemName: "creditcard.circle")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 30)
+                    .frame(height: 30)*/
                 
                 SubHeadlineFont(scaleFactor: storeHelper.fontScaleFactor) { Text(subscriptionInfoText)}
-                    .foregroundColor(.blue)
+                    .foregroundColor(.accentcolor)
                     .lineLimit(nil)
             }
         }
