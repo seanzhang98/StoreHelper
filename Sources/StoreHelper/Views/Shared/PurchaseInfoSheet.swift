@@ -50,11 +50,11 @@ public struct PurchaseInfoSheet: View {
         VStack {
             SheetBarView(showSheet: $showPurchaseInfoSheet, title: "Purchase Information", sysImage: "creditcard.circle")
             
-            Image(productId)
+            /*Image(productId)
                 .resizable()
                 .frame(maxWidth: 85, maxHeight: 85)
                 .aspectRatio(contentMode: .fit)
-                .cornerRadius(25) 
+                .cornerRadius(25) */
             
             ScrollView {
                 if let epi = extendedPurchaseInfo, epi.isPurchased {
