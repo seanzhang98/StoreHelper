@@ -66,7 +66,7 @@ public struct Products: View {
         ScrollView {
             VStack {
                 ProductListView(showRefundSheet: $showRefundSheet, refundRequestTransactionId: $refundRequestTransactionId, signPromotionalOffer: signPromotionalOffer, productInfoCompletion: productInfoCompletion)
-                TermsOfServiceAndPrivacyPolicyView().padding(.top)
+                /*TermsOfServiceAndPrivacyPolicyView().padding(.top)
                 
                 DisclosureGroup(isExpanded: $textExpanded, content: {
                     
@@ -78,14 +78,14 @@ public struct Products: View {
                 }, label: {
                     Label("Manage Purchases", systemImage: "creditcard.circle")
                 })
-                .padding()
+                .padding()*/
                 
                 if !canMakePayments {
                     Spacer()
                     SubHeadlineFont(scaleFactor: storeHelper.fontScaleFactor) { Text("Purchases are not permitted on your device.")}.foregroundColor(.secondary)
                 }
             }
-            .navigationBarTitle("Available Products", displayMode: .inline)
+            //.navigationBarTitle("Available Products", displayMode: .inline)
             .toolbar { PurchaseManagement() }
             .refundRequestSheet(for: refundRequestTransactionId, isPresented: $showRefundSheet) { refundRequestStatus in
                 switch(refundRequestStatus) {
