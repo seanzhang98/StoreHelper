@@ -52,18 +52,18 @@ public struct SubscriptionView: View {
                 .contentShape(Rectangle())
                 .onTapGesture { productInfoCompletion(productId) }
 
-            Image(productId)
+            /*Image(productId)
                 .resizable()
                 .frame(maxWidth: 250, maxHeight: 250)
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(25)
                 .contentShape(Rectangle())
-                .onTapGesture { productInfoCompletion(productId) }
+                .onTapGesture { productInfoCompletion(productId) }*/
             
             PurchaseButton(purchaseState: $purchaseState, productId: productId, price: price, signPromotionalOffer: signPromotionalOffer)
             
             if purchaseState == .purchased, subscriptionInfo != nil {
-                SubscriptionInfoView(subscriptionInfo: subscriptionInfo!)
+                //SubscriptionInfoView(subscriptionInfo: subscriptionInfo!)
             } else {
                 ProductInfoView(productId: productId, displayName: displayName, productInfoCompletion: productInfoCompletion)
             }
