@@ -88,7 +88,7 @@ public struct ProductView: View {
                 PurchaseInfoView(productId: productId)
                 #endif
             } else {
-                ProductInfoView(productId: productId, displayName: displayName, productInfoCompletion: productInfoCompletion)
+                //ProductInfoView(productId: productId, displayName: displayName, productInfoCompletion: productInfoCompletion)
             }
             
             //Divider()
