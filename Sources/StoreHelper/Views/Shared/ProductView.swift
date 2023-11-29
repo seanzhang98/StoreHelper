@@ -69,15 +69,15 @@ public struct ProductView: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(.secondary)
                 .contentShape(Rectangle())
-                .onTapGesture { productInfoCompletion(productId) }
+                //.onTapGesture { productInfoCompletion(productId) }
             
-            Image(productId)
+            /*Image(productId)
                 .resizable()
                 .frame(maxWidth: 250, maxHeight: 250)
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(25)
                 .contentShape(Rectangle())
-                .onTapGesture { productInfoCompletion(productId) }
+                .onTapGesture { productInfoCompletion(productId) }*/
             
             PurchaseButton(purchaseState: $purchaseState, productId: productId, price: price)
             
@@ -91,7 +91,7 @@ public struct ProductView: View {
                 ProductInfoView(productId: productId, displayName: displayName, productInfoCompletion: productInfoCompletion)
             }
             
-            Divider()
+            //Divider()
         }
         .task { await purchaseState(for: productId)}
         .onChange(of: storeHelper.purchasedProducts) { _ in
