@@ -34,7 +34,7 @@ public struct SubscriptionInfoView: View {
                     .frame(height: 30)*/
                 
                 SubHeadlineFont(scaleFactor: storeHelper.fontScaleFactor) { Text(subscriptionInfoText)}
-                    .foregroundColor(.accentcolor)
+                    .foregroundColor(.accentColor)
                     .lineLimit(nil)
             }
         }
