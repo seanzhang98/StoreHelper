@@ -86,7 +86,7 @@ public struct Products: View {
                 }
             }
             //.navigationBarTitle("Available Products", displayMode: .inline)
-            .toolbar { PurchaseManagement() }
+            //.toolbar { PurchaseManagement() }
             .refundRequestSheet(for: refundRequestTransactionId, isPresented: $showRefundSheet) { refundRequestStatus in
                 switch(refundRequestStatus) {
                     case .failure(_): refundAlertText = "Refund request submission failed"
